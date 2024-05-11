@@ -1,14 +1,30 @@
 <p style="color: green"><%= notice %></p>
-
-<h1>Students</h1>
+<div class="main-container">
+<div class="main-header">
+<%= image_tag("adnu-seal.png") %>
+</div>
+<h1>List of Students</h1>
 
 <div id="students">
-  <% @students.each do |student| %>
-    <%= render student %>
-    <p>
-      <%= link_to "Show this student", student %>
-    </p>
-  <% end %>
+  <table>
+    <thead class ="header">
+      <th>Name</th>
+      <th>Year Level</th>
+      <th>Number of Units</th>
+      <th>Total Assessment</th>
+    </thead>
+    <tbody>
+    <% @students.each do |student| %>
+    <tr>
+      <td><%= link_to student.name, student %></td>
+      <td><%= student.year_level%></td>
+      <td><%= student.number_of_units%></td>
+      <td><%= student.total_assessment%></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
 </div>
 
 <%= link_to "New student", new_student_path %>
+</div>
