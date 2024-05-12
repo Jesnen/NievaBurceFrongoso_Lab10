@@ -1,5 +1,8 @@
+<div class ="main-container">
+    <div class="main-header">
+    <%= image_tag("adnu-seal.png") %>
+    </div>
 <h1>Editing course</h1>
-
 <%= render "form", course: @course %>
 
 <br>
@@ -7,4 +10,5 @@
 <div>
   <%= link_to "Show this course", @course %> |
   <%= link_to "Back to courses", courses_path %>
+</div>
 </div>
